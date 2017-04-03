@@ -219,9 +219,9 @@ class Stdout(BaseWriter):
         local_time = utc_datetime - utc_local_diff
         
         if use_12_hour_format:
-            date_format = '%I:%M %p' if not show_datetime else '%a %d, %I:%M %p'
+            date_format = '%I:%M %p' if not show_datetime else '%a %d %B, %I:%M %p'
         else:
-            date_format = '%H:%M' if not show_datetime else '%a %d, %H:%M'
+            date_format = '%H:%M' if not show_datetime else '%a %d %B, %H:%M'
             
         return datetime.datetime.strftime(local_time, date_format)
 
