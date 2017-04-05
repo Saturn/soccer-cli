@@ -55,6 +55,7 @@ def load_config_key():
             with open(config, "w") as cfile:
                 key = get_input_key()
                 cfile.write(key)
+                click.secho("Soccer-CLI API key saved at: {}".format(cfile.name))
         else:
             with open(config, "r") as cfile:
                 key = cfile.read()
